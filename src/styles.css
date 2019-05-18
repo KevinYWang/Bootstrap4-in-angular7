@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  color: #222233;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  height: 100%;
+  width: 100%;
+  font-size: 1.1em;
+}
+.logo-size {
+  height: 42px;
+  width: 48px;
+}
+
+.slide-size {
+  height: 270px;
+  width: 360px;
+  margin: auto;
+}
+.arrow {
+  color: brown;
+}
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0 !important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.fixed {
+  background-image: url("./assets/img/cat.jpg");
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+  padding: 1rem;
+}
+.social-media{
+  font-size: 4em;
+  padding: 2px;
+}
